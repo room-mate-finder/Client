@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct UserView: View {
+    @StateObject var viewModel = MainViewModel()
+    
     var body: some View {
-        Text("User View")
+        List(viewModel.queryRoomMate()) { roomMate in
+            Text(roomMate.name)
+        }
     }
 }
 
