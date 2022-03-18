@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AF0223074D5728AF25B7428 /* Pods_finder_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */; };
+		A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336CD27E3796700CAEF03 /* MainVIew.swift */; };
+		A16336D327E37FC300CAEF03 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D227E37FC300CAEF03 /* UserView.swift */; };
+		A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D427E41EC900CAEF03 /* RoomMate.swift */; };
+		A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D627E41F7C00CAEF03 /* MainViewModel.swift */; };
 		A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */; };
-		A1837FCA27DEDA4D00513F93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1837FC927DEDA4D00513F93 /* ContentView.swift */; };
 		A1837FCC27DEDA4E00513F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCB27DEDA4E00513F93 /* Assets.xcassets */; };
 		A1837FCF27DEDA4E00513F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finder_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16336CD27E3796700CAEF03 /* MainVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIew.swift; sourceTree = "<group>"; };
+		A16336D227E37FC300CAEF03 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		A16336D427E41EC900CAEF03 /* RoomMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMate.swift; sourceTree = "<group>"; };
+		A16336D627E41F7C00CAEF03 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A1837FC427DEDA4D00513F93 /* finder-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "finder-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finder_clientApp.swift; sourceTree = "<group>"; };
-		A1837FC927DEDA4D00513F93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1837FCB27DEDA4E00513F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA4DFEE1E457FF2C74CBF1B4 /* Pods-finder-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finder-client.release.xcconfig"; path = "Target Support Files/Pods-finder-client/Pods-finder-client.release.xcconfig"; sourceTree = "<group>"; };
+		F7B2F215BDDFAD82B4602EDE /* Pods-finder-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finder-client.debug.xcconfig"; path = "Target Support Files/Pods-finder-client/Pods-finder-client.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,15 +36,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF0223074D5728AF25B7428 /* Pods_finder_client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10C626B6E20E701739C3C046 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7B2F215BDDFAD82B4602EDE /* Pods-finder-client.debug.xcconfig */,
+				DA4DFEE1E457FF2C74CBF1B4 /* Pods-finder-client.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A16336D927E4203700CAEF03 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Remote;
+			path = ../Remote;
+			sourceTree = "<group>";
+		};
 		A169F2BC27DF42F1002B4A0B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A16336D627E41F7C00CAEF03 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -42,6 +71,8 @@
 		A169F2BD27DF42FA002B4A0B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A16336CD27E3796700CAEF03 /* MainVIew.swift */,
+				A16336D227E37FC300CAEF03 /* UserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -49,6 +80,8 @@
 		A169F2BE27DF4302002B4A0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A16336D927E4203700CAEF03 /* Remote */,
+				A16336D427E41EC900CAEF03 /* RoomMate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -58,6 +91,8 @@
 			children = (
 				A1837FC627DEDA4D00513F93 /* finder-client */,
 				A1837FC527DEDA4D00513F93 /* Products */,
+				10C626B6E20E701739C3C046 /* Pods */,
+				AB226E1F63D86AE4CAEF4D77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +111,6 @@
 				A169F2BD27DF42FA002B4A0B /* View */,
 				A169F2BC27DF42F1002B4A0B /* ViewModel */,
 				A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */,
-				A1837FC927DEDA4D00513F93 /* ContentView.swift */,
 				A1837FCB27DEDA4E00513F93 /* Assets.xcassets */,
 				A1837FCD27DEDA4E00513F93 /* Preview Content */,
 			);
@@ -91,6 +125,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AB226E1F63D86AE4CAEF4D77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1837FD227DEDA4E00513F93 /* Build configuration list for PBXNativeTarget "finder-client" */;
 			buildPhases = (
+				5C34E9D4B344AC9ECA3CBA9D /* [CP] Check Pods Manifest.lock */,
 				A1837FC027DEDA4D00513F93 /* Sources */,
 				A1837FC127DEDA4D00513F93 /* Frameworks */,
 				A1837FC227DEDA4D00513F93 /* Resources */,
+				E6CDD0C390CE6F9715327914 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,13 +200,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C34E9D4B344AC9ECA3CBA9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-finder-client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6CDD0C390CE6F9715327914 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-finder-client/Pods-finder-client-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-finder-client/Pods-finder-client-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-finder-client/Pods-finder-client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1837FC027DEDA4D00513F93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1837FCA27DEDA4D00513F93 /* ContentView.swift in Sources */,
+				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
+				A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */,
+				A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */,
 				A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */,
+				A16336D327E37FC300CAEF03 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +376,7 @@
 		};
 		A1837FD327DEDA4E00513F93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B2F215BDDFAD82B4602EDE /* Pods-finder-client.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -316,6 +406,7 @@
 		};
 		A1837FD427DEDA4E00513F93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA4DFEE1E457FF2C74CBF1B4 /* Pods-finder-client.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
