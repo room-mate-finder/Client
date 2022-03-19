@@ -8,5 +8,6 @@ target 'finder-client' do
   # Pods for finder-client
 
   pod 'Alamofire', '~> 5.5'
+  pod 'KeychainSwift', '~> 20.0'
 
 end
