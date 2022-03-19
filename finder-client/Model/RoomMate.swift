@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct RoomMate: Identifiable {
-    var id: Int
+struct RoomMate: Codable {
     let number: String
     let name: String
     let description: String?

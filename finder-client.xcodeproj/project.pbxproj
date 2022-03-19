@@ -18,7 +18,6 @@
 		A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */; };
 		A1837FCC27DEDA4E00513F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCB27DEDA4E00513F93 /* Assets.xcassets */; };
 		A1837FCF27DEDA4E00513F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */; };
-		A1C264AE27E612E500D63898 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C264AD27E612E500D63898 /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finder_clientApp.swift; sourceTree = "<group>"; };
 		A1837FCB27DEDA4E00513F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A1C264AD27E612E500D63898 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		DA4DFEE1E457FF2C74CBF1B4 /* Pods-finder-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finder-client.release.xcconfig"; path = "Target Support Files/Pods-finder-client/Pods-finder-client.release.xcconfig"; sourceTree = "<group>"; };
 		F7B2F215BDDFAD82B4602EDE /* Pods-finder-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finder-client.debug.xcconfig"; path = "Target Support Files/Pods-finder-client/Pods-finder-client.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +92,6 @@
 			children = (
 				A16336D927E4203700CAEF03 /* Network */,
 				A16336D427E41EC900CAEF03 /* RoomMate.swift */,
-				A1C264AD27E612E500D63898 /* Countries.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
 				A16336E027E4441F00CAEF03 /* StatusCode.swift in Sources */,
 				A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */,
-				A1C264AE27E612E500D63898 /* Countries.swift in Sources */,
 				A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */,
 				A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */,
 				A16336D327E37FC300CAEF03 /* UserView.swift in Sources */,
