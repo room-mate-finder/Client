@@ -12,6 +12,9 @@
 		A16336D327E37FC300CAEF03 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D227E37FC300CAEF03 /* UserView.swift */; };
 		A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D427E41EC900CAEF03 /* RoomMate.swift */; };
 		A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D627E41F7C00CAEF03 /* MainViewModel.swift */; };
+		A16336DC27E4294F00CAEF03 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336DB27E4294F00CAEF03 /* HTTPClient.swift */; };
+		A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336DD27E4440400CAEF03 /* FINDERAPI.swift */; };
+		A16336E027E4441F00CAEF03 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336DF27E4441F00CAEF03 /* StatusCode.swift */; };
 		A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */; };
 		A1837FCC27DEDA4E00513F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCB27DEDA4E00513F93 /* Assets.xcassets */; };
 		A1837FCF27DEDA4E00513F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */; };
@@ -23,6 +26,9 @@
 		A16336D227E37FC300CAEF03 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A16336D427E41EC900CAEF03 /* RoomMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMate.swift; sourceTree = "<group>"; };
 		A16336D627E41F7C00CAEF03 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A16336DB27E4294F00CAEF03 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		A16336DD27E4440400CAEF03 /* FINDERAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FINDERAPI.swift; sourceTree = "<group>"; };
+		A16336DF27E4441F00CAEF03 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		A1837FC427DEDA4D00513F93 /* finder-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "finder-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finder_clientApp.swift; sourceTree = "<group>"; };
 		A1837FCB27DEDA4E00513F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,12 +58,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A16336D927E4203700CAEF03 /* Remote */ = {
+		A16336D927E4203700CAEF03 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A1C264AF27E6378400D63898 /* Dto */,
+				A16336DB27E4294F00CAEF03 /* HTTPClient.swift */,
+				A16336DD27E4440400CAEF03 /* FINDERAPI.swift */,
+				A16336DF27E4441F00CAEF03 /* StatusCode.swift */,
 			);
-			name = Remote;
-			path = ../Remote;
+			name = Network;
+			path = ../Network;
 			sourceTree = "<group>";
 		};
 		A169F2BC27DF42F1002B4A0B /* ViewModel */ = {
@@ -80,7 +90,7 @@
 		A169F2BE27DF4302002B4A0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A16336D927E4203700CAEF03 /* Remote */,
+				A16336D927E4203700CAEF03 /* Network */,
 				A16336D427E41EC900CAEF03 /* RoomMate.swift */,
 			);
 			path = Model;
@@ -123,6 +133,13 @@
 				A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1C264AF27E6378400D63898 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		AB226E1F63D86AE4CAEF4D77 /* Frameworks */ = {
@@ -247,11 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */,
 				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
+				A16336E027E4441F00CAEF03 /* StatusCode.swift in Sources */,
 				A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */,
 				A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */,
 				A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */,
 				A16336D327E37FC300CAEF03 /* UserView.swift in Sources */,
+				A16336DC27E4294F00CAEF03 /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
