@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct RoomMateList: Codable {
+    let mates: [RoomMate]
+}
+
 struct RoomMate: Codable {
     let number: String
     let name: String
