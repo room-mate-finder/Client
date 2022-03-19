@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MainView: View {
+    @ObservedObject var viewModel = MainViewModel()
+    
     var body: some View {
         VStack{
             NavigationView {
@@ -16,6 +19,15 @@ struct MainView: View {
                 } label: {
                     Text("Go to User")
                 }
+            }
+            List(viewModel.roomMates, id: \.number) { roomMate in
+                HStack {
+                    Text(roomMate.number)
+                    Spacer()
+                    Text(roomMate.name)
+                }
+            }.onAppear {
+                viewModel.queryRoomMate()
             }
         }
     }
