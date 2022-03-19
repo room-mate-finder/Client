@@ -10,8 +10,12 @@ import Combine
 
 class MainViewModel: ObservableObject {
     
-    func queryRoomMate() -> Array<RoomMate> {
-        return [RoomMate(id: 0, number: "3211", name: "이서준", description: nil, lifeStyle: "CLEAN", bedTime: "EALRY", wakeUpTime: "OTHER")]
+    @Published var roomMates = [RoomMate]()
+    
+    func queryRoomMate() {
+        HTTPClient.instance.request(.queryLoginLink, RoomMateList.self) { [weak self] (result: RoomMateList?) in
+            self?.roomMates = result?.mates ?? []
+        }
     }
     
 }
