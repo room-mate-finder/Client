@@ -29,9 +29,7 @@ struct MainView: View {
                     .navigationBarHidden(true)
                 }
                 .background(
-                    Rectangle()
-                        .fill(Color("header"))
-                        .frame(width: 390, height: 85)
+                    Color("header")
                 )
                 Spacer()
                 
@@ -51,6 +49,7 @@ struct MainView: View {
                 }
             }
         }
+        
     }
 }
 
