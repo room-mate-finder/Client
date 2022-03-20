@@ -12,22 +12,43 @@ struct MainView: View {
     @ObservedObject var viewModel = MainViewModel()
     
     var body: some View {
-        VStack{
-            NavigationView {
-                NavigationLink {
-                    UserView()
-                } label: {
-                    Text("Go to User")
-                }
-            }
-            List(viewModel.roomMates, id: \.number) { roomMate in
+        NavigationView {
+            VStack{
                 HStack {
-                    Text(roomMate.number)
+                    
+                    Image("logo")
+                        .frame(width: 135, height: 54.85)
                     Spacer()
-                    Text(roomMate.name)
+                    NavigationLink {
+                        UserView()
+                    } label: {
+                        Image("customer")
+                            .frame(width: 22, height: 28)
+                            .padding(.trailing, 12)
+                    }
+                    .navigationBarHidden(true)
                 }
-            }.onAppear {
-                viewModel.queryRoomMate()
+                .background(
+                    Rectangle()
+                        .fill(Color("header"))
+                        .frame(width: 390, height: 85)
+                )
+                Spacer()
+                
+                ScrollView(.horizontal, showsIndicators: true) {
+                    HStack {
+                        ForEach(viewModel.roomMates, id: \.number) { roomMate in
+                            HStack {
+                                Text(roomMate.number)
+                                Spacer()
+                                Text(roomMate.name)
+                            }
+                        }.onAppear {
+                            viewModel.queryRoomMate()
+                        }
+                    }
+                    
+                }
             }
         }
     }
@@ -36,5 +57,6 @@ struct MainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
