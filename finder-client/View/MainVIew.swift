@@ -8,6 +8,24 @@
 import SwiftUI
 import Combine
 
+struct RoomMateView: View {
+    var number: String
+    var name: String
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.gray)
+                .frame(width: 200, height: 300)
+                .cornerRadius(10)
+            VStack {
+                Text(number)
+                Text(name)
+            }
+        }
+    }
+}
+
 struct MainView: View {
     @ObservedObject var viewModel = MainViewModel()
     
@@ -37,20 +55,21 @@ struct MainView: View {
                     HStack {
                         ForEach(viewModel.roomMates, id: \.number) { roomMate in
                             HStack {
-                                Text(roomMate.number)
-                                Spacer()
-                                Text(roomMate.name)
+                                RoomMateView(number: roomMate.number, name: roomMate.name)
                             }
                         }.onAppear {
-                            viewModel.queryRoomMate()
+//                            viewModel.queryRoomMate()
                         }
                     }
                     
                 }
+                Spacer()
             }
+            .background(.black)
         }
         
     }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
