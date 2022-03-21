@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5AF0223074D5728AF25B7428 /* Pods_finder_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */; };
+		A142AFB527E8351300A1D79A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFB427E8351300A1D79A /* ChatView.swift */; };
 		A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336CD27E3796700CAEF03 /* MainVIew.swift */; };
 		A16336D327E37FC300CAEF03 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D227E37FC300CAEF03 /* UserView.swift */; };
 		A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D427E41EC900CAEF03 /* RoomMate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finder_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A142AFB327E74D6400A1D79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A142AFB427E8351300A1D79A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A16336CD27E3796700CAEF03 /* MainVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIew.swift; sourceTree = "<group>"; };
 		A16336D227E37FC300CAEF03 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A16336D427E41EC900CAEF03 /* RoomMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				A16336CD27E3796700CAEF03 /* MainVIew.swift */,
 				A16336D227E37FC300CAEF03 /* UserView.swift */,
+				A142AFB427E8351300A1D79A /* ChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
 				A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */,
 				A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */,
+				A142AFB527E8351300A1D79A /* ChatView.swift in Sources */,
 				A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */,
 				A16336D327E37FC300CAEF03 /* UserView.swift in Sources */,
 				A16336DC27E4294F00CAEF03 /* HTTPClient.swift in Sources */,

@@ -34,21 +34,42 @@ struct MainView: View {
             VStack{
                 HStack {
                     
-                    Image("logo")
-                        .frame(width: 135, height: 54.85)
+                    Image("Logo")
+                        .resizable()
+                        .frame(width: 135, height: 35)
+                        .padding(.leading, 14)
+                        .padding(.bottom, 10)
                     Spacer()
                     NavigationLink {
                         UserView()
                     } label: {
-                        Image("customer")
+                        Image("Customer")
                             .frame(width: 22, height: 28)
                             .padding(.trailing, 12)
                     }
                     .navigationBarHidden(true)
                 }
+                .frame(width: 390, height: 50)
                 .background(
-                    Color("header")
+                    Color("Header")
                 )
+                NavigationLink {
+                    ChatView()
+                } label: {
+                    HStack {
+                        Spacer()
+                        ZStack {
+                            Image("ChatIconBlock")
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                            Image("Chat")
+                                .resizable()
+                                .frame(width: 26, height: 22)
+                        }
+                    }
+                    
+                    
+                }
                 Spacer()
                 
                 ScrollView(.horizontal, showsIndicators: true) {
@@ -58,7 +79,7 @@ struct MainView: View {
                                 RoomMateView(number: roomMate.number, name: roomMate.name)
                             }
                         }.onAppear {
-//                            viewModel.queryRoomMate()
+                            viewModel.queryRoomMate()
                         }
                     }
                     
