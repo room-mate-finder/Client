@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5AF0223074D5728AF25B7428 /* Pods_finder_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */; };
+		A142AFB527E8351300A1D79A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFB427E8351300A1D79A /* ChatView.swift */; };
 		A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336CD27E3796700CAEF03 /* MainVIew.swift */; };
 		A16336D327E37FC300CAEF03 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D227E37FC300CAEF03 /* UserView.swift */; };
 		A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D427E41EC900CAEF03 /* RoomMate.swift */; };
 		A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D627E41F7C00CAEF03 /* MainViewModel.swift */; };
 		A16336DC27E4294F00CAEF03 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336DB27E4294F00CAEF03 /* HTTPClient.swift */; };
 		A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336DD27E4440400CAEF03 /* FINDERAPI.swift */; };
-		A16336E027E4441F00CAEF03 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336DF27E4441F00CAEF03 /* StatusCode.swift */; };
 		A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */; };
 		A1837FCC27DEDA4E00513F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCB27DEDA4E00513F93 /* Assets.xcassets */; };
 		A1837FCF27DEDA4E00513F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */; };
@@ -22,13 +22,14 @@
 
 /* Begin PBXFileReference section */
 		292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finder_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A142AFB327E74D6400A1D79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A142AFB427E8351300A1D79A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A16336CD27E3796700CAEF03 /* MainVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIew.swift; sourceTree = "<group>"; };
 		A16336D227E37FC300CAEF03 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A16336D427E41EC900CAEF03 /* RoomMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMate.swift; sourceTree = "<group>"; };
 		A16336D627E41F7C00CAEF03 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A16336DB27E4294F00CAEF03 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		A16336DD27E4440400CAEF03 /* FINDERAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FINDERAPI.swift; sourceTree = "<group>"; };
-		A16336DF27E4441F00CAEF03 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		A1837FC427DEDA4D00513F93 /* finder-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "finder-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finder_clientApp.swift; sourceTree = "<group>"; };
 		A1837FCB27DEDA4E00513F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 				A1C264AF27E6378400D63898 /* Dto */,
 				A16336DB27E4294F00CAEF03 /* HTTPClient.swift */,
 				A16336DD27E4440400CAEF03 /* FINDERAPI.swift */,
-				A16336DF27E4441F00CAEF03 /* StatusCode.swift */,
 			);
 			name = Network;
 			path = ../Network;
@@ -83,6 +83,7 @@
 			children = (
 				A16336CD27E3796700CAEF03 /* MainVIew.swift */,
 				A16336D227E37FC300CAEF03 /* UserView.swift */,
+				A142AFB427E8351300A1D79A /* ChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +118,7 @@
 		A1837FC627DEDA4D00513F93 /* finder-client */ = {
 			isa = PBXGroup;
 			children = (
+				A142AFB327E74D6400A1D79A /* Info.plist */,
 				A169F2BE27DF4302002B4A0B /* Model */,
 				A169F2BD27DF42FA002B4A0B /* View */,
 				A169F2BC27DF42F1002B4A0B /* ViewModel */,
@@ -266,9 +268,9 @@
 			files = (
 				A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */,
 				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
-				A16336E027E4441F00CAEF03 /* StatusCode.swift in Sources */,
 				A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */,
 				A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */,
+				A142AFB527E8351300A1D79A /* ChatView.swift in Sources */,
 				A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */,
 				A16336D327E37FC300CAEF03 /* UserView.swift in Sources */,
 				A16336DC27E4294F00CAEF03 /* HTTPClient.swift in Sources */,
@@ -406,6 +408,7 @@
 				DEVELOPMENT_TEAM = MVKCSTH5SK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "finder-client/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,6 +439,7 @@
 				DEVELOPMENT_TEAM = MVKCSTH5SK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "finder-client/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
