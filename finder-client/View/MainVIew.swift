@@ -15,7 +15,7 @@ struct RoomMateView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(.gray)
+                .fill(Color("Gray"))
                 .frame(width: 200, height: 300)
                 .cornerRadius(10)
             VStack {
@@ -33,7 +33,6 @@ struct MainView: View {
         NavigationView {
             VStack{
                 HStack {
-                    
                     Image("Logo")
                         .resizable()
                         .frame(width: 135, height: 35)
@@ -47,7 +46,6 @@ struct MainView: View {
                             .frame(width: 22, height: 28)
                             .padding(.trailing, 12)
                     }
-                    .navigationBarHidden(true)
                 }
                 .frame(width: 390, height: 50)
                 .background(
@@ -67,8 +65,6 @@ struct MainView: View {
                                 .frame(width: 26, height: 22)
                         }
                     }
-                    
-                    
                 }
                 Spacer()
                 
@@ -87,6 +83,8 @@ struct MainView: View {
                 Spacer()
             }
             .background(.black)
+            .navigationTitle("Home")
+            .navigationBarHidden(true)
         }
         
     }
