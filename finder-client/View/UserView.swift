@@ -14,96 +14,95 @@ struct UserView: View {
     @State private var description: String = ""
     
     var body: some View {
-        VStack {
-            Text("내 정보 수정")
-                .font(.system(.title2))
-                .fontWeight(.bold)
-                .padding()
-            
-            Spacer()
-            
-            Section(header: Text("내 타입")) {
-                Picker("내 타입", selection: $lifeStyle) {
-                    ForEach(LifeStyle.allCases, id: \.self) {
-                        Text($0.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(.bottom, 36)
-            }
-            
-            Section(header: Text("취침 시간")) {
-                Picker("취침 시간", selection: $bedTime) {
-                    ForEach(Time.allCases, id: \.self) {
-                        Text($0.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(.bottom, 36)
-            }
-            
-            Section(header: Text("기상 시간")) {
-                Picker("기상 시간", selection: $wakeUpTime) {
-                    ForEach(Time.allCases, id: \.self) {
-                        Text($0.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(.bottom, 36)
-            }
-            
-            Section(header: Text("자기소개")) {
-                ZStack {
-                    TextEditor(text: $description)
-                        .onReceive(description.publisher.collect()) {
-                            let s = String($0.prefix(200))
-                            if description != s {
-                                description = s
-                            }
-                        }
-                        .foregroundColor(.white)
-                        .frame(width: 336, height: 190)
-                    //                    .overlay(RoundedRectangle(cornerRadius: 20).fill(Color("Gray")).frame(width: 336, height: 190))
-                    //                        .frame(width: 336, height: 190)
-                    //                        .multilineTextAlignment(.leading)
-                    //                        .padding(.bottom, 30)
-                    
-                    Text(description)
-                        .opacity(0)
-                    
-                    HStack {
-                        Text(String(description.count))
-                            .fontWeight(.bold)
-                        Text("/ 200")
-                            .fontWeight(.bold)
-                    }
-                    .padding(.top, 160)
-                    .padding(.leading, 240)
-                    
-                    .frame(width: 336, height: 190)
-                    
-                }
-                .background(RoundedRectangle(cornerRadius: 20).fill(Color("Gray")).frame(width: 336, height: 190))
-                .padding(.bottom, 30)
-            }
-            
-            ZStack {
-                Image("Box")
-                    .resizable()
-                    .frame(width: 322, height: 57)
-                
-                Text("완료")
-                    .font(.system(.title))
+        ScrollView {
+            VStack {
+                Text("내 정보 수정")
+                    .font(.system(.title2))
                     .fontWeight(.bold)
+                    .padding()
+                
+                Spacer()
+                
+                Section(header: Text("내 타입")) {
+                    Picker("내 타입", selection: $lifeStyle) {
+                        ForEach(LifeStyle.allCases, id: \.self) {
+                            Text($0.rawValue)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.bottom, 36)
+                }
+                
+                Section(header: Text("취침 시간")) {
+                    Picker("취침 시간", selection: $bedTime) {
+                        ForEach(Time.allCases, id: \.self) {
+                            Text($0.rawValue)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.bottom, 36)
+                }
+                
+                Section(header: Text("기상 시간")) {
+                    Picker("기상 시간", selection: $wakeUpTime) {
+                        ForEach(Time.allCases, id: \.self) {
+                            Text($0.rawValue)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.bottom, 36)
+                }
+                
+                Section(header: Text("자기소개")) {
+                    ZStack {
+                        TextEditor(text: $description)
+                            .onReceive(description.publisher.collect()) {
+                                let s = String($0.prefix(200))
+                                if description != s {
+                                    description = s
+                                }
+                            }
+                            .foregroundColor(.white)
+                            .background(Color("Gray"))
+                            .frame(width: 336, height: 190)
+                            .cornerRadius(25)
+                        
+                        HStack {
+                            Text(String(description.count))
+                                .fontWeight(.bold)
+                            Text("/ 200")
+                                .fontWeight(.bold)
+                        }
+                        .padding(.top, 160)
+                        .padding(.leading, 240)
+                        
+                    }
+                    .onAppear {
+                        UITextView.appearance().backgroundColor = .clear
+                    }
+                    .padding(.bottom, 30)
+                }
+                .onTapGesture {
+                    self.endTextEditing()
+                }
+                
+                ZStack {
+                    Image("Box")
+                        .resizable()
+                        .frame(width: 322, height: 57)
+                    
+                    Text("완료")
+                        .font(.system(.title))
+                        .fontWeight(.bold)
+                }
+                .padding(.bottom, 10)
+                
+                
             }
-            .padding(.bottom, 10)
-            
-            
+            .background(.black)
         }
-        .onTapGesture {
-            self.endTextEditing()
-        }
-        .background(.black)
+        
+        
     }
     
     func limitText() {
