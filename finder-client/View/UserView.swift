@@ -6,25 +6,19 @@
 //
 
 import SwiftUI
+import Combine
 
 struct UserView: View {
-    @State private var lifeStyle = LifeStyle.CLEAN
-    @State private var bedTime = Time.EARLY
-    @State private var wakeUpTime = Time.EARLY
-    @State private var description: String = ""
+    @ObservedObject var viewModel = UserViewModel()
     
     var body: some View {
         ScrollView {
             VStack {
-                Text("내 정보 수정")
-                    .font(.system(.title2))
-                    .fontWeight(.bold)
-                    .padding()
                 
                 Spacer()
                 
                 Section(header: Text("내 타입")) {
-                    Picker("내 타입", selection: $lifeStyle) {
+                    Picker("내 타입", selection: $viewModel.lifeStyle) {
                         ForEach(LifeStyle.allCases, id: \.self) {
                             Text($0.rawValue)
                         }
@@ -34,7 +28,7 @@ struct UserView: View {
                 }
                 
                 Section(header: Text("취침 시간")) {
-                    Picker("취침 시간", selection: $bedTime) {
+                    Picker("취침 시간", selection: $viewModel.bedTime) {
                         ForEach(Time.allCases, id: \.self) {
                             Text($0.rawValue)
                         }
@@ -44,7 +38,7 @@ struct UserView: View {
                 }
                 
                 Section(header: Text("기상 시간")) {
-                    Picker("기상 시간", selection: $wakeUpTime) {
+                    Picker("기상 시간", selection: $viewModel.wakeUpTime) {
                         ForEach(Time.allCases, id: \.self) {
                             Text($0.rawValue)
                         }
@@ -55,11 +49,11 @@ struct UserView: View {
                 
                 Section(header: Text("자기소개")) {
                     ZStack {
-                        TextEditor(text: $description)
-                            .onReceive(description.publisher.collect()) {
+                        TextEditor(text: $viewModel.description)
+                            .onReceive(viewModel.description.publisher.collect()) {
                                 let s = String($0.prefix(200))
-                                if description != s {
-                                    description = s
+                                if viewModel.description != s {
+                                    viewModel.description = s
                                 }
                             }
                             .foregroundColor(.white)
@@ -68,7 +62,7 @@ struct UserView: View {
                             .cornerRadius(25)
                         
                         HStack {
-                            Text(String(description.count))
+                            Text(String(viewModel.description.count))
                                 .fontWeight(.bold)
                             Text("/ 200")
                                 .fontWeight(.bold)
@@ -91,9 +85,16 @@ struct UserView: View {
                         .resizable()
                         .frame(width: 322, height: 57)
                     
-                    Text("완료")
-                        .font(.system(.title))
-                        .fontWeight(.bold)
+                    Button {
+                        print("press")
+                        viewModel.saveUserInformation()
+                    } label: {
+                        Text("완료")
+                            .font(.system(.title))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                    }
+                    
                 }
                 .padding(.bottom, 10)
                 
@@ -101,13 +102,16 @@ struct UserView: View {
             }
             .background(.black)
         }
-        
-        
+        .onAppear {
+            viewModel.queryUserInformation()
+        }
+        .navigationBarTitle("내 정보 수정", displayMode: .inline)
     }
     
+    
     func limitText() {
-        if description.count > 255 {
-            description = String(describing: description.prefix(255))
+        if viewModel.description.count > 255 {
+            viewModel.description = String(describing: viewModel.description.prefix(255))
         }
     }
     

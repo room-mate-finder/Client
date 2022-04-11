@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5AF0223074D5728AF25B7428 /* Pods_finder_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */; };
+		A13622672803A95900EEFD68 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13622662803A95900EEFD68 /* UserViewModel.swift */; };
+		A13622692803B3CB00EEFD68 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13622682803B3CB00EEFD68 /* UserInformation.swift */; };
 		A142AFB527E8351300A1D79A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFB427E8351300A1D79A /* ChatView.swift */; };
 		A142AFBA27E8A08F00A1D79A /* LifeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFB927E8A08F00A1D79A /* LifeStyle.swift */; };
 		A142AFBC27E8A0BE00A1D79A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFBB27E8A0BE00A1D79A /* Time.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		292A12BB117787BE16BD6F7D /* Pods_finder_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finder_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13622662803A95900EEFD68 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A13622682803B3CB00EEFD68 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		A142AFB327E74D6400A1D79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A142AFB427E8351300A1D79A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A142AFB927E8A08F00A1D79A /* LifeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyle.swift; sourceTree = "<group>"; };
@@ -75,7 +79,6 @@
 		A16336D927E4203700CAEF03 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A1C264AF27E6378400D63898 /* Dto */,
 				A16336DB27E4294F00CAEF03 /* HTTPClient.swift */,
 				A16336DD27E4440400CAEF03 /* FINDERAPI.swift */,
 			);
@@ -87,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A16336D627E41F7C00CAEF03 /* MainViewModel.swift */,
+				A13622662803A95900EEFD68 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,6 +111,7 @@
 			children = (
 				A16336D927E4203700CAEF03 /* Network */,
 				A16336D427E41EC900CAEF03 /* RoomMate.swift */,
+				A13622682803B3CB00EEFD68 /* UserInformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,13 +154,6 @@
 				A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A1C264AF27E6378400D63898 /* Dto */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dto;
 			sourceTree = "<group>";
 		};
 		AB226E1F63D86AE4CAEF4D77 /* Frameworks */ = {
@@ -281,6 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */,
+				A13622692803B3CB00EEFD68 /* UserInformation.swift in Sources */,
+				A13622672803A95900EEFD68 /* UserViewModel.swift in Sources */,
 				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
 				A142AFBC27E8A0BE00A1D79A /* Time.swift in Sources */,
 				A142AFBA27E8A08F00A1D79A /* LifeStyle.swift in Sources */,
@@ -418,10 +418,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"finder-client/Preview Content\"";
-				DEVELOPMENT_TEAM = MVKCSTH5SK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "finder-client/Info.plist";
@@ -436,6 +437,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leeseojune53.finder-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -448,10 +450,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"finder-client/Preview Content\"";
-				DEVELOPMENT_TEAM = MVKCSTH5SK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "finder-client/Info.plist";
@@ -466,6 +469,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leeseojune53.finder-client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
