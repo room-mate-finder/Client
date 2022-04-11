@@ -74,11 +74,12 @@ struct MainView: View {
                             HStack {
                                 RoomMateView(number: roomMate.number, name: roomMate.name)
                             }
-                        }.onAppear {
-                            viewModel.queryRoomMate()
                         }
                     }
                     
+                }
+                .onAppear {
+                    viewModel.queryRoomMate()
                 }
                 Spacer()
             }
@@ -88,7 +89,7 @@ struct MainView: View {
         }
         
     }
-        
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
