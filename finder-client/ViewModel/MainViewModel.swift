@@ -13,7 +13,7 @@ class MainViewModel: ObservableObject {
     @Published var roomMates = [RoomMate]()
     
     func queryRoomMate() {
-        HTTPClient.instance.request(.queryLoginLink, RoomMateList.self) { [weak self] (result: RoomMateList?) in
+        HTTPClient.instance.request(.queryRoomMate, RoomMateList.self) { [weak self] (result: RoomMateList?) in
             self?.roomMates = result?.mates ?? []
         }
     }
