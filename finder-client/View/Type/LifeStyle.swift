@@ -10,4 +10,13 @@ import Foundation
 enum LifeStyle: String, CaseIterable {
     case CLEAN = "깔끔"
     case USEFUL = "실용"
+    
+    static func stringToLifeStyle(value: String) -> LifeStyle {
+        switch value {
+        case "USEFUL":
+            return LifeStyle.USEFUL
+        default:
+            return LifeStyle.CLEAN
+        }
+    }
 }
