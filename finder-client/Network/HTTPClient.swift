@@ -20,13 +20,20 @@ class HTTPClient {
         AF.request(api.uri, method: api.method, parameters: api.parameter, encoding: api.encoding, headers: api.header)
             .validate(statusCode: 200..<500)
             .responseDecodable(of: T.self) { [weak self] response in
-                do {
-                    let result = try self?.decoder.decode(T.self, from: response.data!)
-                    
-                    completionHandler(result)
-                }catch(let err) {
-                    print(err)
+                switch response.response?.statusCode {
+                case 200, 201:
+                    do {
+                        let result = try self?.decoder.decode(T.self, from: response.data!)
+                        
+                        completionHandler(result)
+                    }catch(let err) {
+                        print(err)
+                    }
+                default:
+                    print(response.response?.statusCode)
+                    print(response.response)
                 }
+                
             }
     }
     
