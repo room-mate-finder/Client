@@ -10,8 +10,8 @@ import Alamofire
 import KeychainSwift
 
 enum FINDERAPI {
-    case queryLoginLink
-    case auth(_ code: String)
+    case auth(_ number: String, _ password: String)
+    case signUp(_ number: String, _ password: String, _ name: String)
     case tokenRefresh
     case updateMyInformation(_ lifeStyle: String, _ bedTime: String, _ wakeUpTime: String, _ description: String)
     case queryMyInformation
@@ -28,18 +28,18 @@ enum FINDERAPI {
 extension FINDERAPI {
     
     public var uri: String {
-        let baseUrl = "https://finder.ddyzd.click"
+        let baseUrl = "http://localhost:8080"
         return baseUrl + path
     }
     
     public var method: HTTPMethod {
         switch self {
-        case .queryLoginLink,
-                .queryMyInformation,
+        case .queryMyInformation,
                 .queryRoomInformation,
                 .queryRoomMate:
             return .get
         case .auth,
+                .signUp,
                 .sendInvite:
             return .post
         case .tokenRefresh:
@@ -55,8 +55,10 @@ extension FINDERAPI {
     
     public var parameter: Parameters? {
         switch self {
-        case .auth(let code):
-            return ["code": code]
+        case .signUp(let number, let password, let name):
+            return ["nubmer": number, "password": password, "name": name]
+        case .auth(let number, let password):
+            return ["number": number, "password": password]
         case .updateMyInformation(let lifeStyle, let bedTime, let wakeUpTime, let description):
             return [
                 "life_style": lifeStyle,
@@ -71,7 +73,7 @@ extension FINDERAPI {
             return [
                 "room_number": roomNumber,
                 "count": count
-            	]
+            ]
         default:
             return nil
         }
@@ -88,34 +90,37 @@ extension FINDERAPI {
     
     public var header: HTTPHeaders? {
         switch self {
-        case .queryLoginLink,
-                .auth:
+        case .auth,
+                .signUp:
             return nil
         case .tokenRefresh:
             return ["REFRESH-TOKEN": refreshToken]
         default:
-            return ["Authroization": "Bearer \(accessToken)"]
+            return [
+                "Authorization": "Bearer \(accessToken)"
+            ]
         }
     }
     
     private var path: String {
         switch self {
-        case .queryLoginLink,
-            .auth(_),
-            .tokenRefresh:
+        case .signUp:
+            return "/users/signup"
+        case .auth,
+                .tokenRefresh:
             return "/users/auth"
         case .updateMyInformation,
-            .queryMyInformation:
+                .queryMyInformation:
             return "/users/information"
         case .queryRoomInformation,
-            .updateRoomInformation:
+                .updateRoomInformation:
             return "/rooms/information"
         case .leaveRoom:
             return "/rooms"
         case .queryRoomMate:
             return "/rooms/mates"
         case .sendInvite,
-            .refuseInvite:
+                .refuseInvite:
             return "/invite"
         @unknown default :
             return ""
