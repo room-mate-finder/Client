@@ -87,6 +87,8 @@ struct MainView: View {
             .navigationTitle("Home")
             .navigationBarHidden(true)
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         
     }
     
