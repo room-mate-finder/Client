@@ -13,6 +13,8 @@
 		A142AFB527E8351300A1D79A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFB427E8351300A1D79A /* ChatView.swift */; };
 		A142AFBA27E8A08F00A1D79A /* LifeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFB927E8A08F00A1D79A /* LifeStyle.swift */; };
 		A142AFBC27E8A0BE00A1D79A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFBB27E8A0BE00A1D79A /* Time.swift */; };
+		A143BA5D28289D590065FF86 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143BA5C28289D590065FF86 /* AuthView.swift */; };
+		A143BA5F28289DB10065FF86 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143BA5E28289DB10065FF86 /* AuthViewModel.swift */; };
 		A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336CD27E3796700CAEF03 /* MainVIew.swift */; };
 		A16336D327E37FC300CAEF03 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D227E37FC300CAEF03 /* UserView.swift */; };
 		A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D427E41EC900CAEF03 /* RoomMate.swift */; };
@@ -22,6 +24,7 @@
 		A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */; };
 		A1837FCC27DEDA4E00513F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCB27DEDA4E00513F93 /* Assets.xcassets */; };
 		A1837FCF27DEDA4E00513F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */; };
+		A1B376F62829E4DF00CD072D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B376F52829E4DF00CD072D /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,8 @@
 		A142AFB427E8351300A1D79A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A142AFB927E8A08F00A1D79A /* LifeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStyle.swift; sourceTree = "<group>"; };
 		A142AFBB27E8A0BE00A1D79A /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		A143BA5C28289D590065FF86 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		A143BA5E28289DB10065FF86 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		A16336CD27E3796700CAEF03 /* MainVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIew.swift; sourceTree = "<group>"; };
 		A16336D227E37FC300CAEF03 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A16336D427E41EC900CAEF03 /* RoomMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		A1837FC727DEDA4D00513F93 /* finder_clientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finder_clientApp.swift; sourceTree = "<group>"; };
 		A1837FCB27DEDA4E00513F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1837FCE27DEDA4E00513F93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1B376F52829E4DF00CD072D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		DA4DFEE1E457FF2C74CBF1B4 /* Pods-finder-client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finder-client.release.xcconfig"; path = "Target Support Files/Pods-finder-client/Pods-finder-client.release.xcconfig"; sourceTree = "<group>"; };
 		F7B2F215BDDFAD82B4602EDE /* Pods-finder-client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finder-client.debug.xcconfig"; path = "Target Support Files/Pods-finder-client/Pods-finder-client.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +97,7 @@
 			children = (
 				A16336D627E41F7C00CAEF03 /* MainViewModel.swift */,
 				A13622662803A95900EEFD68 /* UserViewModel.swift */,
+				A143BA5E28289DB10065FF86 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 				A16336CD27E3796700CAEF03 /* MainVIew.swift */,
 				A16336D227E37FC300CAEF03 /* UserView.swift */,
 				A142AFB427E8351300A1D79A /* ChatView.swift */,
+				A143BA5C28289D590065FF86 /* AuthView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 				A16336D927E4203700CAEF03 /* Network */,
 				A16336D427E41EC900CAEF03 /* RoomMate.swift */,
 				A13622682803B3CB00EEFD68 /* UserInformation.swift */,
+				A1B376F52829E4DF00CD072D /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,12 +290,15 @@
 				A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */,
 				A13622692803B3CB00EEFD68 /* UserInformation.swift in Sources */,
 				A13622672803A95900EEFD68 /* UserViewModel.swift in Sources */,
+				A143BA5D28289D590065FF86 /* AuthView.swift in Sources */,
 				A16336D727E41F7C00CAEF03 /* MainViewModel.swift in Sources */,
 				A142AFBC27E8A0BE00A1D79A /* Time.swift in Sources */,
+				A1B376F62829E4DF00CD072D /* Token.swift in Sources */,
 				A142AFBA27E8A08F00A1D79A /* LifeStyle.swift in Sources */,
 				A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */,
 				A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */,
 				A142AFB527E8351300A1D79A /* ChatView.swift in Sources */,
+				A143BA5F28289DB10065FF86 /* AuthViewModel.swift in Sources */,
 				A1837FC827DEDA4D00513F93 /* finder_clientApp.swift in Sources */,
 				A16336D327E37FC300CAEF03 /* UserView.swift in Sources */,
 				A16336DC27E4294F00CAEF03 /* HTTPClient.swift in Sources */,
@@ -419,10 +431,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"finder-client/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MVKCSTH5SK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "finder-client/Info.plist";
@@ -451,10 +463,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"finder-client/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MVKCSTH5SK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "finder-client/Info.plist";
