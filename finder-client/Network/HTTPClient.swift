@@ -26,7 +26,7 @@ class HTTPClient {
                         let result = try self?.decoder.decode(T.self, from: response.data!)
                         
                         completionHandler(result)
-                    }catch(let err) {
+                    } catch(let err) {
                         print(err)
                     }
                 default:
