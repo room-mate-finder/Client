@@ -13,12 +13,16 @@ class AuthViewModel: ObservableObject {
     @Published var userId = ""
     @Published var password = ""
     
-    func auth() {
+    func auth() -> Bool {
+        let keyChain = KeychainSwift()
+        if(keyChain.get("ACCESS-TOKEN") != "") {
+            return true
+        }
         HTTPClient.instance.request(.auth(String(userId), String(password)), Token.self) {
             result in
-            let keyChain = KeychainSwift()
             keyChain.set(result?.accessToken ?? "", forKey: "ACCESS-TOKEN")
             keyChain.set(result?.refreshToken ?? "", forKey: "REFRESH-TOKEN")
         }
+        return keyChain.get("ACCESS-TOKEN") != ""
     }
 }
