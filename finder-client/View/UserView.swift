@@ -10,6 +10,7 @@ import Combine
 
 struct UserView: View {
     @ObservedObject var viewModel = UserViewModel()
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView {
@@ -88,6 +89,7 @@ struct UserView: View {
                     Button {
                         print("press")
                         viewModel.saveUserInformation()
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("완료")
                             .font(.system(.title))

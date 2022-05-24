@@ -31,8 +31,7 @@ struct AuthView: View {
                     MainView()
                 } label: {
                     Button {
-                        isSignIn = true
-                        viewModel.auth()
+                        isSignIn = viewModel.auth()
                     } label: {
                         Text("Sign In")
                             .foregroundColor(.white)

@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import KeychainSwift
 
 @main
 struct finder_clientApp: App {
     var body: some Scene {
+        let keyChain = KeychainSwift()
         WindowGroup {
-            AuthView()
+            if(keyChain.get("ACCESS-TOKEN") != "") {
+                MainView()
+            } else {
+                AuthView()
+            }
         }
     }
 }
