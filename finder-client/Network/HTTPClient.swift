@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import KeychainSwift
 
 class HTTPClient {
     static let instance = HTTPClient()
@@ -24,11 +25,13 @@ class HTTPClient {
                 case 200, 201:
                     do {
                         let result = try self?.decoder.decode(T.self, from: response.data!)
-                        
                         completionHandler(result)
                     } catch(let err) {
                         print(err)
                     }
+                case 401:
+                    let keyChain = KeychainSwift()ㅌ
+                    keyChain.set("", forKey: "ACCESS-TOKEN")
                 default:
                     print(response.response?.statusCode)
                     print(response.response)
