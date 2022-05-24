@@ -9,8 +9,7 @@ import SwiftUI
 import Combine
 
 struct RoomMateView: View {
-    var number: String
-    var name: String
+    var roomMate: RoomMate
     
     var body: some View {
         ZStack {
@@ -19,9 +18,16 @@ struct RoomMateView: View {
                 .frame(width: 200, height: 300)
                 .cornerRadius(10)
             VStack {
-                Text(number)
-                Text(name)
+                HStack {
+                    Text(roomMate.number)
+                    Text(roomMate.name)
+                }
+                Text(roomMate.lifeStyle ?? "")
+                Text(roomMate.bedTime ?? "")
+                Text(roomMate.wakeUpTime ?? "")
+                Text(roomMate.description ?? "")
             }
+            
         }
     }
 }
@@ -72,7 +78,7 @@ struct MainView: View {
                     HStack {
                         ForEach(viewModel.roomMates, id: \.number) { roomMate in
                             HStack {
-                                RoomMateView(number: roomMate.number, name: roomMate.name)
+                                RoomMateView(roomMate: roomMate)
                             }
                         }
                     }
