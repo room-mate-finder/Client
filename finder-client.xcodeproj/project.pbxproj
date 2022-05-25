@@ -15,6 +15,7 @@
 		A142AFBC27E8A0BE00A1D79A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AFBB27E8A0BE00A1D79A /* Time.swift */; };
 		A143BA5D28289D590065FF86 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143BA5C28289D590065FF86 /* AuthView.swift */; };
 		A143BA5F28289DB10065FF86 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143BA5E28289DB10065FF86 /* AuthViewModel.swift */; };
+		A15968FC283D23E50096C696 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15968FB283D23E50096C696 /* Error.swift */; };
 		A16336CE27E3796700CAEF03 /* MainVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336CD27E3796700CAEF03 /* MainVIew.swift */; };
 		A16336D327E37FC300CAEF03 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D227E37FC300CAEF03 /* UserView.swift */; };
 		A16336D527E41EC900CAEF03 /* RoomMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16336D427E41EC900CAEF03 /* RoomMate.swift */; };
@@ -37,6 +38,7 @@
 		A142AFBB27E8A0BE00A1D79A /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A143BA5C28289D590065FF86 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		A143BA5E28289DB10065FF86 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A15968FB283D23E50096C696 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		A16336CD27E3796700CAEF03 /* MainVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIew.swift; sourceTree = "<group>"; };
 		A16336D227E37FC300CAEF03 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A16336D427E41EC900CAEF03 /* RoomMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				A16336D427E41EC900CAEF03 /* RoomMate.swift */,
 				A13622682803B3CB00EEFD68 /* UserInformation.swift */,
 				A1B376F52829E4DF00CD072D /* Token.swift */,
+				A15968FB283D23E50096C696 /* Error.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15968FC283D23E50096C696 /* Error.swift in Sources */,
 				A16336DE27E4440400CAEF03 /* FINDERAPI.swift in Sources */,
 				A13622692803B3CB00EEFD68 /* UserInformation.swift in Sources */,
 				A13622672803A95900EEFD68 /* UserViewModel.swift in Sources */,
