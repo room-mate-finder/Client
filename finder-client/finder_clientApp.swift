@@ -15,6 +15,13 @@ struct finder_clientApp: App {
         WindowGroup {
             if(keyChain.get("ACCESS-TOKEN") != "") {
                 MainView()
+            } else if(keyChain.get("REFRESH-TOKEN") != "") {
+                let _ = HTTPClient.instance.request(.tokenRefresh, Token.self) {
+                    result in
+                    keyChain.set(result?.accessToken ?? "", forKey: "ACCESS-TOKEN")
+                    keyChain.set(result?.refreshToken ?? "", forKey: "REFRESH-TOKEN")
+                }
+                MainView()
             } else {
                 AuthView()
             }
