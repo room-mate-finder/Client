@@ -7,10 +7,16 @@
 
 import SwiftUI
 import Combine
+import KeychainSwift
 
 struct UserView: View {
     @ObservedObject var viewModel = UserViewModel()
     @Environment(\.presentationMode) var presentationMode
+    
+    @State
+    var isLogout = false
+    
+    let keyChain = KeychainSwift()
     
     var body: some View {
         ScrollView {
@@ -87,7 +93,6 @@ struct UserView: View {
                         .frame(width: 322, height: 57)
                     
                     Button {
-                        print("press")
                         viewModel.saveUserInformation()
                         presentationMode.wrappedValue.dismiss()
                     } label: {
@@ -108,6 +113,17 @@ struct UserView: View {
             viewModel.queryUserInformation()
         }
         .navigationBarTitle("내 정보 수정", displayMode: .inline)
+        .toolbar {
+            Button {
+                keyChain.set("", forKey: "ACCESS-TOKEN")
+                keyChain.set("", forKey: "REFRESH-TOKEN")
+                self.isLogout.toggle()
+            } label: {
+                Text("Logout")
+            }
+        }
+        
+        NavigationLink(destination: AuthView(), isActive: $isLogout) { }
     }
     
     
