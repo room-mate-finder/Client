@@ -29,9 +29,13 @@ class HTTPClient {
                     } catch(let err) {
                         print(err)
                     }
-                case 401:
+                case 401, 403:
                     let keyChain = KeychainSwift()
-                    keyChain.set("", forKey: "ACCESS-TOKEN")
+                    HTTPClient.instance.request(.tokenRefresh, Token.self) {
+                        result in
+                        keyChain.set(result?.accessToken ?? "", forKey: "ACCESS-TOKEN")
+                        keyChain.set(result?.refreshToken ?? "", forKey: "REFRESH-TOKEN")
+                    }
                 default:
                     print(response.response?.statusCode)
                     print(response.response)
