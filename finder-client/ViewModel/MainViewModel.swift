@@ -18,4 +18,8 @@ class MainViewModel: ObservableObject {
         }
     }
     
+    func sendInvite(number: String) {
+        HTTPClient.instance.request(.sendInvite(number: number), RoomMateList.self) { result in }
+    }
+    
 }
