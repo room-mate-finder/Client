@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 
 struct RoomMateView: View {
+    @ObservedObject var viewModel = MainViewModel()
+    
     var roomMate: RoomMate
     
     var body: some View {
@@ -21,7 +23,15 @@ struct RoomMateView: View {
                 HStack {
                     Text(roomMate.number)
                     Text(roomMate.name)
+                    Button {
+                        viewModel.sendInvite(number: roomMate.number)
+                    } label: {
+                        Image("Invite")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
                 }
+                .padding(.bottom, 150)
                 Text(roomMate.lifeStyle ?? "")
                 Text(roomMate.bedTime ?? "")
                 Text(roomMate.wakeUpTime ?? "")
